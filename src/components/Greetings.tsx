@@ -2,28 +2,26 @@ import { motion } from 'framer-motion';
 
 const Greetings = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-blush relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/src/assets/floral-pattern.png')] opacity-10"></div>
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+    <section
+      className="relative flex flex-col justify-between items-center min-h-screen max-w-xs mx-auto rounded-3xl overflow-hidden shadow-lg bg-black/10"
+      style={{
+        backgroundImage: "url('/wedding/couple.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        aspectRatio: '373/792',
+      }}
+    >
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center z-10 px-4"
+        className="w-full absolute bottom-0 left-0 pb-10 px-6 z-10"
       >
-        <h1 className="text-4xl md:text-6xl font-playfair text-gold mb-4">
-          You're Invited
+        <h1 className="text-white text-5xl md:text-6xl font-playfair font-light leading-none" style={{letterSpacing: '-0.02em'}}>
+          Євген<br />& Анастасія
         </h1>
-        <p className="text-2xl md:text-3xl font-playfair text-gray-700 mb-8">
-          to the wedding of
-        </p>
-        <div className="space-y-2">
-          <h2 className="text-3xl md:text-5xl font-playfair text-gray-800">
-            Sarah & Michael
-          </h2>
-          <p className="text-xl font-montserrat text-gray-600">
-            June 15, 2024
-          </p>
-        </div>
       </motion.div>
     </section>
   );
