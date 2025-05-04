@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  id-token: write
+  pages: write
+  
 jobs:
   build:
 
@@ -55,8 +59,6 @@ jobs:
         # artifact_name: pages
         # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
         preview: true
-    permissions:
-      id-token: write
           
       
           
