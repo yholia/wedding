@@ -33,7 +33,7 @@ jobs:
       uses: actions/upload-pages-artifact@v3.0.1
       with:
         # Artifact name
-        name: dist
+        # name: dist
         # Path of the directory containing the static assets.
         path: dist
         # Duration after which artifact will expire in days.
@@ -42,7 +42,7 @@ jobs:
           
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v4.0.5
-      #with:
+      with:
         # GitHub token
         # token: ${{ github.token }}
         # Time in milliseconds after which to timeout and cancel the deployment (default: 10 minutes)
@@ -52,9 +52,9 @@ jobs:
         # Time in milliseconds between two deployment status report (default: 5 seconds)
         #reporting_interval: # optional, default is 5000
         # Name of the artifact to deploy
-        #artifact_name: # optional, default is github-pages
+        artifact_name: pages
         # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
-        #preview: # optional, default is false
+        preview: true
     permissions:
       id-token: write
           
