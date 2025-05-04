@@ -35,7 +35,7 @@ jobs:
         # Artifact name
         #name: # optional, default is github-pages
         # Path of the directory containing the static assets.
-        path: "/dist"
+        path: /dist
         # Duration after which artifact will expire in days.
         #retention-days: # optional, default is 1
 
