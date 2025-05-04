@@ -39,7 +39,7 @@ jobs:
         # Artifact name
         # name: dist
         # Path of the directory containing the static assets.
-        path: ./dist/*
+        path: ${{ github.workspace }}/dist/*
         # Duration after which artifact will expire in days.
         #retention-days: # optional, default is 1
 
