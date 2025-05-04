@@ -10,7 +10,7 @@ const EventDetails = () => {
           transition={{ duration: 0.8 }}
           className="section-title text-center"
         >
-          Event Details
+          Деталі події
         </motion.h2>
         
         <div className="grid md:grid-cols-2 gap-12 mt-12">
@@ -21,16 +21,33 @@ const EventDetails = () => {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl font-playfair text-gold mb-2">Venue</h3>
-              <p className="section-content">
-                The Grand Ballroom<br />
-                123 Wedding Lane<br />
-                New York, NY 10001
-              </p>
+              <h3 className="text-2xl font-playfair text-gold mb-2">Місце</h3>
+              <a
+                href="https://www.google.com/maps?q=Замок+Лева,+Львів"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="section-content underline text-sage hover:text-gold transition-colors"
+              >
+               Замок Лева<br />
+               вул. Галицької Армії 7-9<br />
+               Львів, Львівська область
+              </a>
+              <div className="mt-4 rounded-lg overflow-hidden shadow-lg border border-sage">
+                <iframe
+                  title="Замок Лева"
+                  src="https://www.google.com/maps?q=Замок+Лева,+Львів&output=embed"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
             
             <div>
-              <h3 className="text-2xl font-playfair text-gold mb-2">Date</h3>
+              <h3 className="text-2xl font-playfair text-gold mb-2">Дата</h3>
               <p className="section-content">
                 Saturday, June 15, 2024
               </p>
