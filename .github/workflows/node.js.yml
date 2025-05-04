@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -33,7 +33,7 @@ jobs:
       uses: actions/upload-pages-artifact@v3.0.1
       with:
         # Artifact name
-        #name: # optional, default is github-pages
+        name: dist
         # Path of the directory containing the static assets.
         path: dist
         # Duration after which artifact will expire in days.
